@@ -32,6 +32,7 @@ func main() {
 	for _, v := range components {
 		log.Println("Setting up " + v)
 		o.StandardSubscription(&c, v+".create", "_type")
+		o.StandardSubscription(&c, v+".update", "_type")
 		o.StandardSubscription(&c, v+".delete", "_type")
 	}
 
