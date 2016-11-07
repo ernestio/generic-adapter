@@ -20,7 +20,7 @@ var natsErr error
 func main() {
 	// TODO : Types probably need to be get from the config with getConnectorTypes
 	//types := []string{"elb", "ebs", "s3", "rds", "route53", "elasticsearch"}
-	components := []string{"vpc", "elb", "network", "instance", "firewall", "s3"}
+	components := []string{"vpc", "elb", "network", "instance", "firewall", "nat", "s3"}
 	types := []string{"aws-fake", "vcloud-fake", "aws", "vcloud", "fake"}
 	nc = ecc.NewConfig(os.Getenv("NATS_URI")).Nats()
 
