@@ -18,7 +18,7 @@ var nc *nats.Conn
 var natsErr error
 
 func main() {
-	components := []string{"vpc", "elb", "network", "instance", "firewall", "nat", "s3", "route53", "elasticsearch", "ebs", "rds"}
+	components := []string{"vpc", "elb", "router", "network", "instance", "firewall", "nat", "s3", "route53", "elasticsearch", "ebs", "rds"}
 	types := []string{"aws-fake", "vcloud-fake", "aws", "vcloud", "fake"}
 	nc = ecc.NewConfig(os.Getenv("NATS_URI")).Nats()
 
