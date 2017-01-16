@@ -32,6 +32,7 @@ func main() {
 		o.StandardSubscription(&c, v+".create", "_type")
 		o.StandardSubscription(&c, v+".update", "_type")
 		o.StandardSubscription(&c, v+".delete", "_type")
+		o.StandardSubscription(&c, v+"s.find", "_type")
 	}
 
 	runtime.Goexit()
